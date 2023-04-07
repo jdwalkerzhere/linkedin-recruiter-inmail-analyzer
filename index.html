@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InMail Analyzer</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="bg-gray-100">
+    <h1 class="text-xl text-center text-slate-600 mt-40">
+      Welcome to InMail Analyzer
+    </h1>
+    <h3 id="instructions" class="text-lg text-center flex-wrap mx-28 text-slate-400 mt-1">
+      You can upload LinkedIn Recruiter InMail Reports for your organization here to see Acceptance Rates rather than Response Rates. Please note that for InMail Analyzer to properly parse your data, it will need to be csv formatted, and the Seat Location column will also need to be deleted.
+    </h3>
+    <div id="content" class="flex justify-center items-center h-fit mt-4">
+      <form id="upload-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label class="block text-gray-700 font-bold mb-2" for="csv-file">
+            Upload CSV File
+          </label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="csv-file" type="file" accept=".csv">
+        </div>
+        <div class="flex items-center justify-center">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    <footer class="fixed bottom-0 text-lg w-full text-center text-slate-400 mt-1">
+      InMail Analyzer reads and modifies your data in the browser and no data is viewable or saved by the tool
+    </footer>
+    <div class="flex justify-center items-center" id="prev_and_next"></div>
+    <script src="index.js"></script>
+  </body>
+</html>
+
